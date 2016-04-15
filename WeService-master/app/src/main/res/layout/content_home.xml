@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".screens.Home"
+    tools:showIn="@layout/app_bar_home">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
+
+
+        <com.wehubs.weservice.CustomViews.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-56dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Hi, Telvin Mathew \n Welcome to HAVENDER!!"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.8"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ddd"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="3dp"
+            android:onClick="onMyProfileClick"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/profile_descriptor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/profile"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/profile_arrow"
+                    android:layout_toRightOf="@+id/divider"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="12dp"
+                    android:text="My Profile "
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/profile_descriptor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile"
+                    android:layout_toLeftOf="@+id/profile_arrow"
+                    android:layout_toRightOf="@+id/divider"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+
+                    android:paddingRight="4dp"
+                    android:text="Complete your profile to be noticable."
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/secondary_text" />
+
+                <ImageView
+                    android:id="@+id/profile_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_chevron_right_grey600_36dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="3dp"
+            android:onClick="onMyInboxClick"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/second_divider"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/inbox_descriptor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/inbox"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/inbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/inbox_arrow"
+                    android:layout_toRightOf="@+id/second_divider"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="12dp"
+                    android:text="My Inbox "
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/inbox_descriptor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inbox"
+                    android:layout_toLeftOf="@+id/inbox_arrow"
+                    android:layout_toRightOf="@+id/second_divider"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+
+                    android:paddingRight="4dp"
+                    android:text="Check your inbox for responses."
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/secondary_text" />
+
+                <ImageView
+                    android:id="@+id/inbox_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_chevron_right_grey600_36dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="3dp"
+            android:onClick="onRequestServiceClick"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/third_divider"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/request_descriptor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/request"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/request"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/request_arrow"
+                    android:layout_toRightOf="@+id/third_divider"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="12dp"
+                    android:text="Request Service"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/request_descriptor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/request"
+                    android:layout_toLeftOf="@+id/request_arrow"
+                    android:layout_toRightOf="@+id/third_divider"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+
+                    android:paddingRight="4dp"
+                    android:text="Request for services."
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/secondary_text" />
+
+                <ImageView
+                    android:id="@+id/request_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_chevron_right_grey600_36dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="onSubmitServiceClick"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/fourth_divider"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/submit_descriptor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/submit"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/submit_arrow"
+                    android:layout_toRightOf="@+id/fourth_divider"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="12dp"
+                    android:text="Submit Service"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/submit_descriptor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/submit"
+                    android:layout_toLeftOf="@+id/submit_arrow"
+                    android:layout_toRightOf="@+id/fourth_divider"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+
+                    android:paddingRight="4dp"
+                    android:text="Submit a service."
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/secondary_text" />
+
+                <ImageView
+                    android:id="@+id/submit_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_chevron_right_grey600_36dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

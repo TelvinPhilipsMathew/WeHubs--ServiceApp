@@ -1,0 +1,147 @@
+  login
+__________
+username- email_id/phone_number
+password
+
+START
+sign up- 1st phase mandatory
+__________
+full_name
+email_id/phone_number
+password
+cpassword
+END
+
+START
+2nd phase
+____________
+service requester/service_provider
+if service provider-tiled screen-
+select main and sub category
+state,city
+phone_number
+submit-home.php
+END
+
+START
+if service requester
+ Go to home screen
+he an select the services from "submit requirement"
+END
+
+
+Edit profile
+____________
+START
+email_id/phone_number
+if service requester changed to service provider
+then go to tiled screen
+select main,sub category 
+state,city
+add portfolio link(not mandatory)
+END
+
+Submit a requirement
+___________________
+START
+
+select main ,sub categories from tiled screen 
+service title, description
+select budget
+select deadline
+ select state, city
+phone_number
+END
+
+----------------------REQUIREMENT  NOTIFICATION SENT---------------
+
+Requirement notification
+____________________________
+START
+
+title
+description
+budget
+deadline
+pitch now(button)
+END
+
+
+Pitch screen
+START
+_______________
+
+pitch description
+budget
+deadline
+pitch(button)
+END
+----------------------RESPONDER NOTIFICATION SENT---------------
+
+
+Responder notification(delivered to the requester)
+START
+_____________________________
+pitch description
+budget
+deadline
+hire button (when this is clicked, contact details will be shared.)
+
+pitches
+START
+_______
+title 1-no of responses (on click show tiled structure)
+title 2--no of responses
+title 3--no of responses
+etc.....etc
+ END
+
+Response tiled structure
+START
+________________________
+individual tiles has name,deadline , budget
+clicking on the tile opens up a modal with the pitch  and a button hire.
+END
+
+------------Hire notification sent------------------------------------------------
+Hire notification
+START
+msg-You have been selected
+
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
