@@ -2,7 +2,6 @@ package com.wehubs.weservice.screens;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -113,12 +113,12 @@ private ImageView userImage;
         startActivity(new Intent(Home.this,MainActivity.class));
     }
 
-    public void onSubmitServiceClick(View view) {
-    }
-
     public void onMyProfileClick(View view) {
     }
 
     public void onMyInboxClick(View view) {
+    }
+
+    public void onActivitiesClick(View view) {
     }
 }

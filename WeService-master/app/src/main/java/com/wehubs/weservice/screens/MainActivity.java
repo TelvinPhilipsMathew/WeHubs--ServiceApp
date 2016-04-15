@@ -8,8 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.wehubs.weservice.customAdapters.CategoryAdapter;
 import com.wehubs.weservice.R;
+import com.wehubs.weservice.customAdapters.CategoryAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         bindViews();
 
         setCategoryAdapter();
@@ -53,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.home) {
+            onBackPressed();
+            return false;
         }
 
         return super.onOptionsItemSelected(item);
